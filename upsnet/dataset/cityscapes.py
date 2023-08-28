@@ -26,7 +26,8 @@ import scipy.io as sio
 import cv2
 import json
 from PIL import Image, ImageDraw
-from collections import defaultdict, Sequence
+from collections import defaultdict
+from collections.abc import Sequence
 
 from upsnet.config.config import config
 from upsnet.dataset.json_dataset import JsonDataset, extend_with_flipped_entries, filter_for_training, add_bbox_regression_targets
