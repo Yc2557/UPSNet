@@ -177,7 +177,7 @@ config.test.panoptic_stuff_area_limit = 4096
 def update_config(config_file):
     exp_config = None
     with open(config_file) as f:
-        exp_config = edict(yaml.load(f))
+        exp_config = edict(yaml.safe_load(f))
         for k, v in exp_config.items():
             if k in config:
                 if isinstance(v, dict):
